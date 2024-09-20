@@ -6,7 +6,7 @@
 
 ## Fonctionnalités
 
-- ✅ Ajouter et supprimer des tâches.
+- ✅ Ajouter, modifier et supprimer des tâches.
 - ✅ Marquer les tâches comme complétées ou non.
 - ✅ Afficher un compteur des tâches complétées.
 - ✅ Interface moderne et responsive pour petits et grands écrans.
