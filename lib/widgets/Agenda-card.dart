@@ -5,6 +5,7 @@ class Todocard extends StatelessWidget {
   final bool etat;
   final Function changer;
   final Function supprimerElement;
+  final Function modifierElement;
   final int i;
   const Todocard(
       {super.key,
@@ -12,7 +13,7 @@ class Todocard extends StatelessWidget {
       required this.etat,
       required this.changer,
       required this.i,
-      required this.supprimerElement});
+      required this.supprimerElement, required this.modifierElement});
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +32,11 @@ class Todocard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                titre,
-                style: TextStyle(color: Colors.white, fontSize: 22),
+              Flexible(
+                child: Text(
+                  titre,
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
               ),
               Row(children: [
                 Tooltip(
@@ -41,6 +44,20 @@ class Todocard extends StatelessWidget {
                   child: Icon(
                     etat ? Icons.check : Icons.close,
                     color: etat ? Colors.green : Colors.red,
+                  ),
+                ),
+                Tooltip(
+                  message: "Modifier ",
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.update, // Icône de modification
+                      color:
+                      Colors.white, // Couleur blanche pour la modification
+                    ),
+                    onPressed: () {
+
+                      modifierElement(i);
+                    },
                   ),
                 ),
                 Tooltip(
@@ -52,11 +69,12 @@ class Todocard extends StatelessWidget {
                           Colors.white, // Couleur blanche pour la suppression
                     ),
                     onPressed: () {
-                      print("$i");
+
                       supprimerElement(i);
                     },
                   ),
-                )
+                ),
+
               ])
             ],
           ),

@@ -57,7 +57,57 @@ Task(title: "Créer un formulaire d'inscription réactif", status: true),
 
 
 
+  void modifierElement(int index) {
+    // Pré-remplir le champ de texte avec la valeur actuelle de la tâche à modifier
+    element.text = allTasks[index].title;
 
+    setState(() {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(11)),
+            child: Container(
+              padding: EdgeInsets.all(22),
+              height: 200,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextField(
+                    controller: element,
+                    maxLength: 80,
+                    decoration: InputDecoration(hintText: "Modifier l'élément"),
+                  ),
+                  SizedBox(height: 22),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Modifier l'élément à l'index donné avec le nouveau titre
+                      setState(() {
+                        allTasks[index].title = element.text;
+                      });
+                      element.clear(); // Effacer le texte après modification
+
+                      Navigator.pop(context); // Fermer la boîte de dialogue
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                    ),
+                    child: Text(
+                      "MODIFIER",
+                      style: TextStyle(fontSize: 22),
+                    ),
+
+                  ),
+
+                ],
+              ),
+            ),
+          );
+        },
+      );
+    });
+  }
 
 
   // Ajouter une tâche
@@ -211,6 +261,7 @@ Task(title: "Créer un formulaire d'inscription réactif", status: true),
                       etat: allTasks[index].status,
                       changer: changerElement,
                       supprimerElement: supprimerElement,
+                      modifierElement: modifierElement,
                       i: index,
                     );
                   }),
