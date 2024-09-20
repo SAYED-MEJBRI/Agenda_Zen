@@ -1,16 +1,33 @@
-# agenda_zen
+# AgendaZen
 
-Ma première application flutter
+**AgendaZen** est une application de gestion de tâches simple et intuitive, développée avec **Flutter** et **Dart**. Elle permet aux utilisateurs de suivre et organiser leurs tâches quotidiennes avec facilité, tout en conservant les données localement sur leur appareil.
 
-## Getting Started
+## Table des matières
+- [Fonctionnalités](#fonctionnalités)
+- [Installation](#installation)
+- [Technologies utilisées](#technologies-utilisées)
+- [Captures d'écran](#captures-décran)
+- [Développement futur](#développement-futur)
+- [Contribuer](#contribuer)
+- [Licence](#licence)
 
-This project is a starting point for a Flutter application.
+## Fonctionnalités
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ Ajouter et supprimer des tâches.
+- ✅ Marquer les tâches comme complétées ou non.
+- ✅ Sauvegarder automatiquement les tâches dans le stockage local.
+- ✅ Afficher un compteur des tâches complétées.
+- ✅ Interface moderne et responsive pour petits et grands écrans.
+- ✅ Supprimer toutes les tâches en un clic.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Prérequis
+- [Flutter](https://flutter.dev/docs/get-started/install) doit être installé.
+- Un émulateur ou un appareil mobile (iOS ou Android).
+
+### Étapes d'installation
+
+1. Clonez ce dépôt :
+   ```bash
+   git clone https://github.com/tonnomdutilisateur/agenda_zen.git
