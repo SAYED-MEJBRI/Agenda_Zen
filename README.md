@@ -8,7 +8,7 @@
 
 - ✅ Ajouter et supprimer des tâches.
 - ✅ Marquer les tâches comme complétées ou non.
-- ✅ Sauvegarder automatiquement les tâches dans le stockage local.
+- ✅ 
 - ✅ Afficher un compteur des tâches complétées.
 - ✅ Interface moderne et responsive pour petits et grands écrans.
 - ✅ Supprimer toutes les tâches en un clic.
